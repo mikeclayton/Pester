@@ -92,7 +92,7 @@ InModuleScope Pester {
         }
 
         # The test excluded on macOS due to issue https://github.com/PowerShell/PowerShell/issues/4268
-        If ( GetPesterOs -ne 'macOS' ) {
+        If ((GetPesterOS) -ne 'macOS') {
             It 'throws exception when self-imposed recursion limit is reached' {
                 $a1 = @(0,1)
                 $a2 = @($a1,2)
